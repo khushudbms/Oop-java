@@ -1,0 +1,372 @@
+Single Inheritance
+
+class Animal {
+
+ void eat() {
+
+ System.out.println("Animal is eating");
+
+ }
+
+}
+
+class Dog extends Animal {
+
+ void bark() {
+
+ System.out.println("Dog is barking");
+
+ }
+
+}
+
+public class SingleInheritanceDemo {
+
+ public static void main(String[] args) {
+
+ Dog d = new Dog();
+
+ d.eat();
+
+ d.bark();
+
+ }
+
+}
+
+Multilevel Inheritance
+
+class Person {
+
+ void display() {
+
+ System.out.println("Person Class");
+
+ }
+
+}
+
+class Student extends Person {
+
+ void showStudent() {
+
+ System.out.println("Student Class");
+
+ }
+
+}
+
+class CollegeStudent extends Student {
+
+ void showCollege() {
+
+ System.out.println("College Student");
+
+ }
+
+}
+
+public class MultilevelDemo {
+
+ public static void main(String[] args) {
+
+ CollegeStudent c = new CollegeStudent();
+
+ c.display();
+
+ c.showStudent();
+
+ c.showCollege();
+
+ }
+
+}
+
+Method Overloading
+
+class Overload {
+
+ int add(int a, int b) {
+
+ return a + b;
+
+ }
+
+ double add(double a, double b) {
+
+ return a + b;
+
+ }
+
+ public static void main(String[] args) {
+
+ Overload obj = new Overload();
+
+ System.out.println(obj.add(10, 20));
+System.out.println(obj.add(2.5, 3.5));
+
+ }
+
+}
+
+Constructor Program
+
+class Student {
+
+ int roll;
+
+ String name;
+
+ Student(int r, String n) {
+
+ roll = r;
+
+ name = n;
+
+ }
+
+ void display() {
+
+ System.out.println(roll + " " + name);
+
+ }
+
+}
+
+public class ConstructorDemo {
+
+ public static void main(String[] args) {
+
+ Student s1 = new Student(1, "Om");
+
+ Student s2 = new Student(2, "Rahul");
+
+ s1.display();
+
+ s2.display();
+
+ }
+
+}
+
+Interface Program
+
+interface Shape {
+
+ void draw();
+
+}
+
+class Circle implements Shape {
+
+ public void draw() {
+
+ System.out.println("Drawing Circle");
+
+ }
+
+}
+
+public class InterfaceDemo {
+
+ public static void main(String[] args) {
+
+ Circle c = new Circle();
+
+ c.draw();
+
+ }
+
+}
+
+Array Program
+
+public class ArrayDemo {
+
+ public static void main(String[] args) {
+
+ int arr[] = {10, 20, 30, 40, 50};
+
+ int sum = 0;
+
+ for(int i = 0; i < arr.length; i++) {
+
+ System.out.print(arr[i] + " ");
+
+ sum += arr[i];
+
+ }
+
+ System.out.println();
+
+ System.out.println("Sum = " + sum);
+
+ }
+Exception Handling
+
+public class ExceptionDemo {
+
+ public static void main(String[] args) {
+
+ try {
+
+ int a = 10;
+
+ int b = 0;
+
+ int result = a / b;
+
+ System.out.println(result);
+
+ } catch(Exception e) {
+
+ System.out.println("Exception Handled");
+
+ }
+
+ }
+
+}
+
+Calculator Program
+
+import java.util.Scanner;
+
+public class Calculator {
+
+ public static void main(String[] args) {
+
+ Scanner sc = new Scanner(System.in);
+
+ int a, b;
+
+ System.out.print("Enter first number: ");
+
+ a = sc.nextInt();
+
+ System.out.print("Enter second number: ");
+
+ b = sc.nextInt();
+
+ System.out.println("Addition = " + (a + b));
+
+ System.out.println("Subtraction = " + (a - b));
+
+ System.out.println("Multiplication = " + (a * b));
+
+ try {
+
+ System.out.println("Division = " + (a / b));
+
+ } catch(Exception e) {
+
+ System.out.println("Cannot divide by zero");
+
+ }
+
+ sc.close();
+
+ }
+
+}
+
+Thread Program
+
+class MyThread extends Thread {
+
+ public void run() {
+
+ for(int i = 1; i <= 5; i++) {
+
+ System.out.println("Thread Running " + i);
+
+ }
+
+ }
+
+}
+
+public class ThreadDemo {
+
+ public static void main(String[] args) {
+
+ MyThread t = new MyThread();
+
+ t.start();
+
+ }}
+
+Bank Management System
+
+class Bank {
+
+ int balance = 5000;
+
+ void deposit(int amount) {
+
+ balance += amount;
+
+ System.out.println("Balance after deposit: " + balance);
+
+ }
+
+ void withdraw(int amount) {
+
+ balance -= amount;
+
+ System.out.println("Balance after withdraw: " + balance);
+
+ }
+
+}
+
+public class BankDemo {
+
+ public static void main(String[] args) {
+
+ Bank b = new Bank();
+
+ b.deposit(1000);
+
+ b.withdraw(500);
+
+ }
+
+}
+
+Student Result Program
+
+class Student {
+
+ int marks1 = 80;
+
+ int marks2 = 75;
+
+ int marks3 = 90;
+
+ void result() {
+
+ int total = marks1 + marks2 + marks3;
+
+ double avg = total / 3.0;
+
+ System.out.println("Total = " + total);
+
+ System.out.println("Average = " + avg);
+
+ }
+
+}
+
+public class StudentResult {
+
+ public static void main(String[] args) {
+
+ Student s = new Student();
+
+ s.result();
+
+ }
+
+}
+}
